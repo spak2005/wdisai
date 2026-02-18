@@ -10,7 +10,7 @@ struct HomeScreen: View {
 
             Image(systemName: "eye.circle.fill")
                 .font(.system(size: 72))
-                .foregroundStyle(.accent)
+                .foregroundStyle(.tint)
 
             VStack(spacing: 8) {
                 Text("What Do I See AI?")

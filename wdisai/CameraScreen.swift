@@ -73,7 +73,7 @@ struct CameraScreen: View {
             Spacer()
             Image(systemName: "camera.viewfinder")
                 .font(.system(size: 64))
-                .foregroundStyle(.accent)
+                .foregroundStyle(.tint)
             Text("Ready to scan")
                 .font(.title3)
                 .foregroundStyle(.secondary)
