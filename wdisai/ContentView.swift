@@ -1,24 +1,21 @@
-//
-//  ContentView.swift
-//  wdisai
-//
-//  Created by Israel Ogbonna on 2/18/26.
-//
-
 import SwiftUI
 
 struct ContentView: View {
-    var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
-        }
-        .padding()
-    }
-}
+    @Environment(AppViewModel.self) private var appVM
 
-#Preview {
-    ContentView()
+    var body: some View {
+        @Bindable var appVM = appVM
+
+        NavigationStack(path: $appVM.path) {
+            HomeScreen(appVM: appVM)
+                .navigationDestination(for: Route.self) { route in
+                    switch route {
+                    case .camera:
+                        CameraScreen(appVM: appVM)
+                    case .result:
+                        ResultScreen(appVM: appVM)
+                    }
+                }
+        }
+    }
 }
