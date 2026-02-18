@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN"
+  "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<!-- SETUP: Replace YOUR_API_KEY_HERE with your OpenAI API key (sk-...) -->
+	<key>OPENAI_API_KEY</key>
+	<string>YOUR_API_KEY_HERE</string>
+
+	<key>NSCameraUsageDescription</key>
+	<string>This app needs camera access so you can take a photo of an item to identify.</string>
+
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>This app needs photo library access so you can choose an existing photo to identify.</string>
+</dict>
+</plist>
